@@ -1,0 +1,13 @@
+body
+{
+ background-color: skyblue;
+ font-size: large;   
+}
+
+table  tr th 
+{
+    border-color: rgb(89, 154, 95);
+    size: 4cm;
+    background-color: rgb(71, 113, 180);
+    padding: 2%;
+}
