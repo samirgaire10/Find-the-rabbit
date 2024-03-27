@@ -12,7 +12,7 @@
     let cnt = 0;
     function notrabbit() {
         cnt = cnt + 1
-        document.getElementById("rabbit").innerHTML = "U r dead" + cnt;
+        document.getElementById("rabbit").innerHTML = "Rabbit is eaten by fox " + cnt + "  Times ";
         document.getElementById("image").src = "./fox.webp"
         if (cnt == 3) {
             document.body.style.backgroundColor = 'red';
@@ -74,7 +74,7 @@
                     <button onclick="notrabbit()"> Where is the rabbit </button>
                 </th>
                 <th>
-                    <button onclick="notrabbit()"> Where is the rabbit </button>
+                    <button onclick="rabbit()"> Where is the rabbit </button>
                 </th>
                 <th>
                     <button onclick="notrabbit()"> Where is the rabbit </button>
@@ -131,7 +131,7 @@
                     <button onclick="notrabbit()"> Where is the rabbit </button>
                 </th>
                 <th>
-                    <button onclick="notrabbit()"> Where is the rabbit </button>
+                    <button onclick="rabbit()"> Where is the rabbit </button>
                 </th>
                 <th>
                     <button onclick="notrabbit()"> Where is the rabbit </button>
