@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Counter app</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <center>
+        <h1 id="cnt_number">0</h1>
+
+        <div id="buttons">
+            <button id="decrease">Decrease</button>
+            <button id="reset">Reset</button>
+            <button id="increase">Increase</button>
+        </div>
+    </center>
+    <style>
+        body {
+            font-size: 50px;
+        }
+    </style>
+
+    <script>
+        let x = 0;
+        document.getElementById('reset').onclick = function cnt_number() {
+            x = 0;
+            document.getElementById('cnt_number').innerHTML = x;
+        }
+
+        document.getElementById('decrease').onclick = function cnt_number() {
+            x = x - 1;
+            document.getElementById('cnt_number').innerHTML = x;
+        }
+
+        document.getElementById('increase').onclick = function cnt_number() {
+            x = x + 1;
+            document.getElementById('cnt_number').innerHTML = x;
+        }
+    </script>
+</body>
+
+</html>
