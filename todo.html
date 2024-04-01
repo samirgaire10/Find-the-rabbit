@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Todo</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <center>
+        Welcome :
+        <div>
+            <li id="user_todos"></li>
+        </div>
+        <input type="text" id="todos">
+        <button id="submit">Submit</button>
+        <p>This is a todo web app for practice </p>
+    </center>
+
+
+    <script>
+        let username;
+        let x;
+        document.getElementById('submit').onclick = function () {
+            for (let i = 0; i <= 10; i++) {
+                if (username != '') {
+                    username = document.getElementById('todos').value;
+                    console.log(username);
+
+                    document.getElementById('user_todos').innerHTML = '' + username + '' + i + "";
+                    console.log(x);
+                }
+            }
+
+
+            // username = document.getElementById('todos').value;
+            // console.log(username);
+        }
+    </script>
+    <style>
+        li {
+            font-size: larger;
+        }
+    </style>
+</body>
+
+</html>
