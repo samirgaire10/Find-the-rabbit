@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Background Color Changer</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <center>
+        <table id='colorchanger'>
+            <tr>
+                <p>Here are some color just click and go</p>
+                <th>
+                    <button onclick="Red()"> Red </button>
+                </th>
+                <th>
+                    <button onclick="green()"> green </button>
+                </th>
+                <th>
+                    <button onclick="pink()"> pink</button>
+                </th>
+                <th>
+                    <button onclick="skyblue()"> skyblue</button>
+                </th>
+
+            </tr>
+            <tr>
+                <th>
+                    <button onclick="orange()"> orange </button>
+                </th>
+                <th>
+                    <button onclick="gray()"> gray </button>
+                </th>
+                <th>
+                    <button onclick="white()"> white</button>
+                </th>
+                <th>
+                    <button onclick="blue()"> blue</button>
+                </th>
+
+            </tr>
+        </table>
+
+        <br>
+        <br>
+        <br>
+        <p>input a color name and change the color</p>
+        <input type="text" id="colorname">
+        <button id="submit">Submit</button>
+        <br>
+        <br>
+        This is a project for change background Color
+
+    </center>
+
+    <script>
+
+
+
+        function Red() {
+            document.body.style.backgroundColor = 'red';
+        } function green() {
+            document.body.style.backgroundColor = 'green';
+        } function pink() {
+            document.body.style.backgroundColor = 'pink';
+        } function skyblue() {
+            document.body.style.backgroundColor = 'skyblue';
+        } function orange() {
+            document.body.style.backgroundColor = 'orange';
+        } function gray() {
+            document.body.style.backgroundColor = 'gray';
+        } function white() {
+            document.body.style.backgroundColor = 'white';
+        } function blue() {
+            document.body.style.backgroundColor = 'blue';
+        }
+
+
+
+        let color;
+        document.getElementById('submit').onclick = function () {
+            color = document.getElementById('colorname').value;
+            document.body.style.backgroundColor = color;
+        }
+
+    </script>
+</body>
+
+</html>

@@ -17,10 +17,40 @@
             <button id="reset">Reset</button>
             <button id="increase">Increase</button>
         </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+
+        <p>I am learning JS (javascript) <br>
+            when clicking to reset it will go back to 0
+            <br>
+            when clicking to increase it will increase number by +1
+            <br>
+            when clicking to reset it will decrease number by -1
+
+        </p>
     </center>
     <style>
-        body {
-            font-size: 50px;
+        #buttons {
+            margin-top: 50px;
+        }
+
+        #buttons button {
+            padding: 15px 30px;
+            font-size: 20px;
+            border-radius: 5px;
+        }
+
+        #buttons button:hover {
+            cursor: pointer;
+            background-color: #4CAF50;
+            color: white;
+        }
+
+        #cnt_number {
+            font-size: 80px;
         }
     </style>
 
@@ -40,6 +70,8 @@
             x = x + 1;
             document.getElementById('cnt_number').innerHTML = x;
         }
+
+
     </script>
 </body>
 
