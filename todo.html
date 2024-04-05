@@ -15,6 +15,7 @@
             <li id="user_todos"></li>
         </div>
         <input type="text" id="todos">
+        <button id="x">x</button>
         <button id="submit">Submit</button>
         <p>This is a todo web app for practice </p>
     </center>
@@ -29,18 +30,24 @@
                     username = document.getElementById('todos').value;
                     console.log(username);
 
-                    document.getElementById('user_todos').innerHTML = '' + username;
+                    document.getElementById('user_todos').innerHTML = '' + username / n;
                     console.log(x);
                 }
             }
+        }
 
+        document.getElementById('x').onclick = function () {
+            document.getElementById('user_todos').innerHTML = '';
 
-            // username = document.getElementById('todos').value;
-            // console.log(username);
         }
     </script>
     <style>
         li {
+            font-size: larger;
+        }
+
+        #x {
+            color: red;
             font-size: larger;
         }
     </style>
