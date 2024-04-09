@@ -12,37 +12,59 @@
     <center>
         Welcome :
         <div>
-            <li id="user_todos"></li>
-            <br>
+            <div>
+                <input type="text" id="input-box">
+                <button onclick="addtask" id="submit">Submit</button>
+            </div>
+
+            <div>
+                <ul id="list-container">
+
+                </ul>
+                <br>
+            </div>
+            <p>This is a todo web app for practice </p>
+            what i learn from this
+            <ul>
+                <li>adding a --addEventListener</li>
+                <li>if , else </li>
+                <li>localStorage saving and getting data from storage</li>
+            </ul>
         </div>
-        <input type="text" id="todos">
-        <button id="x">✖</button>
-        <button id="submit">Submit</button>
-        <p>This is a todo web app for practice </p>
     </center>
 
 
     <script>
-        let username;
-        let x;
-        document.getElementById('submit').onclick = function () {
-            for (let i = 0; i <= 10; i++) {
-                if (username != '') {
-                    username = document.getElementById('todos').value;
-                    console.log(username);
 
-                    document.getElementById('user_todos').innerHTML = '' + username;
-                    document.getElementById('br');
+        const inputbox = document.getElementById('input-box');
+        const submit = document.getElementById('submit');
+        const listcontainer = document.getElementById('list-container');
 
 
-                }
+        submit.addEventListener('click', function () {
+            if (inputbox.value === '') {
+                alert("enter something")
             }
+            else {
+                let li = document.createElement('li');
+                li.innerHTML = inputbox.value;
+                listcontainer.appendChild(li);
+            }
+            inputbox.value = '';
+            savedata();
+        })
+
+        function savedata() {
+            localStorage.setItem('data', listcontainer.innerHTML);
         }
 
-        document.getElementById('x').onclick = function () {
-            document.getElementById('user_todos').innerHTML = '';
-
+        function showdata() {
+            listcontainer.innerHTML = localStorage.getItem('data');
         }
+        showdata();
+
+
+
     </script>
     <style>
         li {
