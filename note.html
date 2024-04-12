@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Note app</title>
+    <link rel="stylesheet" href="./style.css">
+    <style>
+        input {
+            width: 500px;
+            height: 200px;
+        }
+
+        button {
+            width: 500px;
+        }
+
+        ul {
+            border: 10cm;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="container">
+        <input id="Inputnote" type="text"><br>
+        <center> <button id="send">Send</button> </center>
+    </div>
+    <div>
+        <table>
+            <ul id="list-container">
+
+            </ul>
+        </table>
+        <br>
+    </div>
+
+    <script>
+
+        const inputbox = document.getElementById('Inputnote');
+        const send = document.getElementById('send');
+        const listcontainer = document.getElementById('list-container');
+
+
+        send.addEventListener('click', function () {
+            if (inputbox.value === '') {
+                alert("The note is Empty!")
+            }
+            else {
+                let li = document.createElement('li');
+                li.innerHTML = inputbox.value;
+                listcontainer.appendChild(li);
+            }
+            inputbox.value = '';
+            savedata();
+        })
+
+        function savedata() {
+            localStorage.setItem('notes', listcontainer.innerHTML);
+        }
+
+        function showdata() {
+            listcontainer.innerHTML = localStorage.getItem('notes');
+        }
+        showdata();
+
+
+
+    </script>
+</body>
+
+</html>
